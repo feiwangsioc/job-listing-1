@@ -20,6 +20,7 @@ class Admin::JobsController < ApplicationController
     @job = Job.new(job_params)
     
     if @job.save
+      flash[:notice] = "You created a new opening"
       redirect_to admin_jobs_path
     else 
       render :new
