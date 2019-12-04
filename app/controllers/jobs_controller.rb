@@ -42,7 +42,7 @@ class JobsController < ApplicationController
   end 
   
   def update
-    @job = Job.find(parmas[:id])
+    @job = Job.find(params[:id])
     if @job.update(job_params)
       redirect_to jobs_path
     else 

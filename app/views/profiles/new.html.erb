@@ -1,0 +1,10 @@
+<h1> Add your profile </h1>
+
+<%= simple_form_for [@user, @profile] do |f| %>
+
+<%= f.input :name %>
+<%= f.input :email %>
+<%= f.input :experience %>
+
+  <%= f.submit "Submit" %>
+<% end %>
