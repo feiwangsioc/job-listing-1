@@ -2,7 +2,22 @@
 <!--  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>-->
 <!--</div>-->
 
-<div class="dropdown clearfix pull-right">
+
+
+
+<div class= "col-md-10 col-centered">
+
+
+    <div class="text-center">
+      <%= will_paginate @jobs %>
+    </div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <h3>
+      JOB LISTING
+      <div class="dropdown clearfix pull-right">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       SORT BY
         <span class="caret"></span>
@@ -19,11 +34,13 @@
           <%= link_to("Sort by Date", jobs_path ) %>
 
         </li>
-    </ul>
-</div>
-
-
-<table class="table table-boldered">
+     </ul>
+    </div>
+      </h3>
+      </div>
+  
+  <div class="panel-body">
+    <table class="table table-boldered">
     <thead>
         <tr>
             <td>
@@ -54,7 +71,7 @@
     </tbody>
 
 </table>
+  </div>
+</div>
 
-    <div class="text-center">
-      <%= will_paginate @jobs %>
-    </div>
+</div>

@@ -22,11 +22,12 @@
 
 
 .jumbotron {
- 
+  
   background-image:url("https://cdn.pixabay.com/photo/2017/01/05/16/57/girl-1955797_960_720.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
+  margin-top: 0px;//和顶部拉开距离
 }
 
 .title {
@@ -84,7 +85,10 @@
 
      border-color: #212121; //边框色
 
-     margin-bottom: 0; //底部 margin 不撑开距离
+     border-radius: 0;
+     
+      margin-bottom: -10px;
+     
 }
 
 @media (min-width: 768px) {
@@ -286,4 +290,9 @@
 
 .login-help{
   font-size: 12px;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }
