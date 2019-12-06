@@ -1,4 +1,10 @@
 class Admin::UsersController < ApplicationController
+  
+    before_action :authenticate_user!
+   
+    
+    def show
+    end
 
     def index
       @users = User.all
@@ -23,5 +29,7 @@ class Admin::UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email)
     end
+    
+
   
 end

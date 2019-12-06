@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
    devise_for :users 
    
-
+ resource :user
    
   namespace :admin do
     resources :jobs do
@@ -13,7 +13,9 @@ Rails.application.routes.draw do
       resources :resumes
      
     end
-     resources :users
+     resources :users do
+       resource :profile, :controller => "user_profiles"
+     end
      
   end
   
