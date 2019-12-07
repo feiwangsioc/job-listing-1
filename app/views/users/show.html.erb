@@ -1,6 +1,26 @@
-<h1>我的个人资料</h1>
 
-<p>Email: <%= @user.email %></p>
+<div class= "col-md-8 col-centered">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h1><%= @user.profile.legal_name %> 's Profile</h1>
+    </div>
+    
+     <div class="panel-body">
+      <p>Email: <%= @user.email %></p>
+   
+      
+      
+      <p>Birthday: <%= @user.profile.birthday %></p>
+      <p>Bio: <%= simple_format @user.profile.bio %></p>
+      <p>Location: <%= @user.profile.location%> </p>
+      <p>Education: <%= @user.profile.education %></p>
+      <p>Occupation: <%= @user.profile.occupation%> </p>
+      <p>Specialty: <%= @user.profile.specialty%> </p>
 
-<p>Birthday: <%= @user.profile.birthday %></p>
-<p>Bio: <%= simple_format @user.profile.bio %></p>
+    </div>
+
+
+ 
+  
+  </div>
+</div>

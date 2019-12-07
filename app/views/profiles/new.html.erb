@@ -1,10 +1,20 @@
-<h1> Add your profile </h1>
 
-<%= simple_form_for [@user, @profile] do |f| %>
+<div class= "col-md-10 col-centered">
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+      <h1> Add your profile </h1>
+  </div>
+      <div class="panel-body">
+        <%= simple_form_for [@user, @profile] do |f| %>
+        
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :experience %>
+        
+        <%= f.submit "Submit" %>
+        <% end %>
+      </div>
+      
+  </div>
 
-<%= f.input :name %>
-<%= f.input :email %>
-<%= f.input :experience %>
-
-  <%= f.submit "Submit" %>
-<% end %>
+</div>
