@@ -1,4 +1,5 @@
 class Admin::UserProfilesController < ApplicationController
+  layout "admin"
   
      before_action :find_user_and_profile
  

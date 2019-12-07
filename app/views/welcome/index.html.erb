@@ -28,8 +28,11 @@
           <img src="https://cdn.pixabay.com/photo/2016/01/10/22/52/letters-1132703_960_720.png" width="200px" height="30px" alt="bid" class = "img-thumbnail">
           <div class="caption">
             
-            <a href="mailto:service@realoffer.com"> <h3>service@realoffer.com </h3>
+            <a id= "toggle-2" href="mailto:service@realoffer.com"> <h3>service@realoffer.com </h3>
             </a>
+             <div id="foo-2" style="background-color:powderblue;">
+            <p>Please email me at feiwangsioc@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
@@ -37,9 +40,9 @@
         <div class="thumbnail">
           <img src="https://cdn.pixabay.com/photo/2016/02/07/14/45/smartphone-1184883_960_720.png" width="200px" height="30px" alt="heart" class = "img-thumbnail">
           <div class="caption">
-            <a id="my-toggle-click"> <h3>(NPA)-NXX-XXXX</h3>
+            <a id="toggle-3"> <h3>(NPA)-NXX-XXXX</h3>
             </a>
-            <div id="foo" style="border: 2px solid blue;">
+            <div id="foo-3" style="background-color:powderblue;">
               <p>Please contact me at (352) 213 0083 if any questions</p>
             </div>
           </div>
@@ -50,10 +53,18 @@
 </section>
 
 <script>
-  $("#foo").hide();   // 先马上藏起来
+  $("#foo-3").hide();   // 先马上藏起来
 
-  $("#my-toggle-click").hover(function(){
-    $("#foo").fadeToggle();   // 移过去会有开关的效果
+  $("#toggle-3").hover(function(){
+    $("#foo-3").fadeToggle();   // 移过去会有开关的效果
   })
+  
+   $("#foo-2").hide();   // 先马上藏起来
+
+  $("#toggle-2").hover(function(){
+    $("#foo-2").fadeToggle();   // 移过去会有开关的效果
+  })
+  
+  
 
 </script>
