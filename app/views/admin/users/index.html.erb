@@ -2,20 +2,21 @@
   <div class="panel panel-primary">
   <div class="panel-heading">
 
-    <h1>Admin Users</h1>
+    <h1>Applicants List</h1>
   </div>
   <div class="panel-body">
     <table class="table">
     <tr>
       <th>ID</th>
       <th>Email</th>
-      <th>Actions</th>
+      <th>Action</th>
+      <th></th>
     </tr>
     <% @users.each do |user| %>
       <tr>
         <td><%= user.id %></td>
         <td><%= user.email %></td>
-        <td><%= link_to "Edit", edit_admin_user_path(user), :class => "btn btn-default" %></td>
+        <td><%= link_to "Edit Email", edit_admin_user_path(user), :class => "btn btn-default" %></td>
         <td><%= link_to "Edit Profile", edit_admin_user_profile_path(user), :class => "btn btn-default" %></td>
       </tr>
     <% end %>
