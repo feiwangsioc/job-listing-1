@@ -2,7 +2,11 @@
 <!--  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>-->
 <!--</div>-->
 
+<br>
 
+<b>Find the key words here:</b>  
+<input id="myInput" type="text" placeholder="Search..">
+<br>
 
 
 <div class= "col-md-10 col-centered">
@@ -51,7 +55,7 @@
         </tr>
 
     </thead>
-    <tbody>
+    <tbody id="myTable">
         <% @jobs.each do |job| %>
         <tr>
             <td>
@@ -75,3 +79,33 @@
 </div>
 
 </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
